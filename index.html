@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x24"
+      href="./assets/images/desktop-design-favicon-32x24.png"
+    />
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- img desktop size: 400X593 -->
+      <picture class="img-container">
+        <source
+          media="(min-width: 700px)"
+          srcset="./assets/images/illustration-sign-up-desktop.svg"
+          loading="eager"
+        />
+        <img
+          src="./assets/images/illustration-sign-up-mobile.svg"
+          alt="newsletter image"
+          width="400"
+          height="332"
+          class="newsletter-img"
+          loading="eager"
+        />
+      </picture>
+
+      <!-- <div class="hero-img"></div> -->
+      <div class="newsletter-text">
+        <h1 class="newsletter-header">Stay updated!</h1>
+        <p class="newsletter-info">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <ul class="newsletter-advantages">
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+        <form class="newsletter-form">
+          <label for="email"
+            ><h5 class="newsletter-form-label-text">
+              <span>Email address</span>
+              <span hidden class="invalid-email">Valid email required</span>
+            </h5></label
+          >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="newsletter-form-email"
+            placeholder="email@company.com"
+            required
+          />
+          <button type="submit" class="newsletter-form-submit">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="attribution" hidden>
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
