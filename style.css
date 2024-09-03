@@ -59,12 +59,9 @@ a {
     min-width: min-content;
   }
   .success-message {
-    --message-sizes: 90vw;
-    width: var(--message-sizes);
-    height: fit-content;
-    min-width: 240px;
-    padding: 2.4rem !important;
-    border-radius: 2rem;
+    max-width: 67vw;
+    min-width: fit-content;
+    height: 90vh;
   }
 }
 @media (width >= 700px) {
@@ -75,8 +72,9 @@ a {
     border-radius: var(--border-radius);
   }
   .success-message {
-    max-width: 30vw;
-    height: 90vh;
+    max-width: 50vw;
+    padding: 2.4rem !important;
+    border-radius: 2rem;
   }
 }
 /* app */
@@ -132,13 +130,18 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.newsletter-form-email:invalid {
-  border: solid var(--tomato);
-  background-color: hsl(4, 100%, 67%, 25%);
+.invalid-email-required-text {
   color: var(--invalid-email-color, orange);
 }
-.invalid-email {
+/* controlled by js */
+.subscribed-failed,
+.newsletter-form-email:not(:placeholder-shown, :focus):invalid {
   color: var(--invalid-email-color, orange);
+  border: solid var(--tomato);
+  background-color: hsl(4, 100%, 67%, 25%);
+}
+.newsletter-form-email:invalid,
+.invalid-email-backg {
 }
 .newsletter-form-email:valid {
   border: dashed green;
@@ -150,6 +153,7 @@ a {
   padding: 5%;
   margin-block: 0.7rem;
   border-radius: 7px;
+  font: inherit;
 }
 .newsletter-form-submit,
 .btn {
@@ -170,7 +174,7 @@ a {
   opacity: 1;
 }
 
-/* newsletter sign-up success message - page */
+/* newsletter sign-up success message page */
 .success-message {
   display: flex;
   flex-direction: column;
