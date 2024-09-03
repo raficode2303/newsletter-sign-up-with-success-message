@@ -1,3 +1,14 @@
+/* import font */
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Regular'), url('./assets/fonts/Roboto-Regular.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Bold'), url('./assets/fonts/Roboto-Bold.ttf');
+  font-weight: 700;
+}
 /* css custom variables  */
 /* Mobile: 375px
 Desktop: 1440px */
@@ -28,7 +39,7 @@ body {
   place-content: center;
   min-height: 100vh;
   line-height: 1.5;
-  font-family: var(--font), sans-serif;
+  font-family: var(--font);
   background-color: var(--charcoal-grey);
 }
 img {
